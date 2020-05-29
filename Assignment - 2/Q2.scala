@@ -1,31 +1,26 @@
 import scala.io.StdIn.readInt
 
 object Q2{
-    def findBest()={
-        var best=0
-        // val pps=500
-        val p10=(10-3)*140
-        val p15=(15-3)*120
-        val p20=(20-3)*100
+    
+    def attendees(price:Int):Int = 120+(15-price)/5*20
 
-        if(p10>p15 && p10>p20)
-        {
-            best=10
-        }
-        else if(p15>p20)
-        {
-            best=15
-        }
-        else
-        {
-            best=20
-        }
+    def revenue(price:Int):Int = attendees(price)*price
 
-        printf("Best ticket price is : %d/=",best)
-    }
+    def cost(price:Int):Int = 500+attendees(price)
+
+    def profit(price:Int):Int = revenue(price)- cost(price)
 
     def main(args: Array[String])
     {
-        findBest()
+        var price=0
+        printf("Enter price : ")
+        price = readInt()
+        do
+        {
+            printf("The profit for %d is %d\n",price,profit(price))
+            printf("Enter price (-1 to exit) : ")
+            price = readInt()
+        }while(price!=(-1))
+        
     }
 }
