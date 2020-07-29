@@ -1,2 +1,3 @@
-# functionalProgramming-Assingment-1
-Scala assignment1
+# functionalProgramming-Assingment
+
+All the assignments of module functional programming is updated here
