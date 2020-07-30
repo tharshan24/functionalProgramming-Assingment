@@ -37,11 +37,11 @@ object Q3Q4{
 
         val balance=(b:List[Account])=> b.map(_.balance).sum
 
-        // val interest=(b:List[Account])=>b.map(if(_.balance>0)_.balance*1.05 else _.balance*0.9).sum
+        val interest=(b:List[Account])=>b.map(x=>(if(x.balance>0)x.balance*1.05 else x.balance*1.1))
         
         println("\n\tNegative balance Accounts : "+overdraft(bank))
         println("\n\tTotal balance of Accounts : "+balance(bank))
-        // println(interest(bank))
+        println("\n\tTotal balance of Accounts with Interest : "+interest(bank))
 
 
     }
