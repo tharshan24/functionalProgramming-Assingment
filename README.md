@@ -1,3 +1,3 @@
 # functionalProgramming-Assingment
 
-All the assignments of module functional programming is updated here
+All the assignments of module functional programming in UCSC-CS is updated here
